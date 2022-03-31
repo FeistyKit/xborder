@@ -13,8 +13,8 @@ def draw_rectangle(
     color: list[int],
     border_color: list[int] | None,
 ) -> None:
-    width = int(width * 1.002)
-    height = int(height * 1.002)
+    width += 2
+    height += 2
     ctx.set_source_rgba(color[0] / 255, color[1] / 255, color[2] / 255, color[3])
     if border_radius > 0:
         corner_radius = border_radius
